@@ -23,7 +23,7 @@ const DataList = () => {
   };
   return (
     <>
-      {data.map((item: DataProps, index: number) => (
+      {data.map((item: DataProps, index: number = item.order) => (
         <DataListItem
           item={item}
           dragStart={dragStart}
@@ -32,7 +32,6 @@ const DataList = () => {
           index={index}
         />
       ))}
-      ;
     </>
   );
 };
